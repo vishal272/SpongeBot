@@ -2,7 +2,6 @@ require('dotenv').config();
 const discord = require('discord.js');
 const client = new discord.Client();
 const Prefix = process.env.Prefix;
-const WelcomeChannel = process.env.WelcomeChannel;
 const MemberRole = process.env.MemberRole;
 client.login(process.env.Bot_Token);
 
