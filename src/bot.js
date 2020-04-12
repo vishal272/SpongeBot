@@ -23,6 +23,12 @@ client.on('message', function(message) {
         if(role) {
             if(message.member.roles.cache.has(role.id)){
             message.channel.send("You already have this role!");
+            setTimeout(() => {
+                message.channel.bulkDelete(100);
+            }, 2000);
+            setTimeout(() => {
+                message.channel.send("Please enter your IGN to have full access of the server!:heart:")
+            }, 4000);
             }
             else{
                 message.channel.send("IGN added!")
