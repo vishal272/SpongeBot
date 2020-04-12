@@ -12,7 +12,6 @@ client.on('ready', () => {
 
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(Prefix + cmdName)
 
-
 //Enforce Nickname On Welcome
 client.on('message', function(message) {
     if(message.author.bot) return;
