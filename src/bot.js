@@ -22,7 +22,7 @@ client.on('message', function(message) {
             let role = cache.find(role => role.name.toLowerCase() === MemberRole);
         if(role) {
             if(message.member.roles.cache.has(role.id)){
-            message.channel.send("You already have this role!");
+            message.channel.send("Why are u here? You should have done this already!");
             setTimeout(() => {
                 message.channel.bulkDelete(100);
             }, 2000);
