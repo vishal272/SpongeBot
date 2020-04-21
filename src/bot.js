@@ -15,7 +15,7 @@ const isValidCommand = (message, cmdName) => message.content.toLowerCase().start
 //Enforce Nickname On Welcome
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.channel.name.slice(3) === "welcomee"){
+    if(message.channel.name.substring(3) === "welcomee"){
         if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
         message.member.setNickname( message.author.username + " | " + message.content , " ").catch(err=>console.log(err));
         let { cache } = message.guild.roles;
