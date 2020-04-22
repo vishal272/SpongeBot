@@ -3,7 +3,7 @@ const discord = require('discord.js');
 const client = new discord.Client();
 const Prefix = process.env.Prefix;
 const MemberRole = process.env.MemberRole;
-var hidenseek =
+//var hidenseek =
 client.login(process.env.Bot_Token);
 
 client.on('ready', () => {
