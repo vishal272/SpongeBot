@@ -18,7 +18,7 @@ client.on('message', function(message) {
     if(message.author.bot) return;
 
     //Enforce Nickname On Welcome
-    if(message.channel.name.id == 698669941506703501){
+    if(message.channel.id == 698669941506703501){
         if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
         message.member.setNickname( message.author.username + " | " + message.content , " ").catch(err=>console.log(err));
         let { cache } = message.guild.roles;
