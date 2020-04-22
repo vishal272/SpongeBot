@@ -3,6 +3,7 @@ const discord = require('discord.js');
 const client = new discord.Client();
 const Prefix = process.env.Prefix;
 const MemberRole = process.env.MemberRole;
+var hidenseek =
 client.login(process.env.Bot_Token);
 
 client.on('ready', () => {
@@ -15,7 +16,9 @@ const isValidCommand = (message, cmdName) => message.content.toLowerCase().start
 //Enforce Nickname On Welcome
 client.on('message', function(message) {
     if(message.author.bot) return;
-    if(message.channel.name.substring(3) === "welcomee"){
+
+    //Enforce Nickname On Welcome
+    if(message.channel.name.id == 698669941506703501){
         if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
         message.member.setNickname( message.author.username + " | " + message.content , " ").catch(err=>console.log(err));
         let { cache } = message.guild.roles;
@@ -45,4 +48,7 @@ client.on('message', function(message) {
             message.channel.send("Role not found!")
         }
     }
+
+
+
 });
