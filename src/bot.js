@@ -219,10 +219,4 @@ client.on('message', async message => {
         }
         activeevent = " ";
     }
-    else if (isValidCommand(message, "test")) {
-        temp = await message.channel.send("test")
-        setTimeout(() => {
-            temp.delete();
-        }, 2000);
-    }
 });
