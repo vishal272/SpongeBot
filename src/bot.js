@@ -79,7 +79,7 @@ client.on('message', async message => {
                 let eventduration = args[1] * 60;
                 let clueinterval = args[1] * 60 / clues.length;
                 console
-                let countdown = 5 * 10;
+                let countdown = 5 * 60;
                 let r = 0
                 let c = 0
                 let cluestring = clues[c]
