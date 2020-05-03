@@ -79,7 +79,7 @@ client.on('message', async message => {
                 let eventduration = args[1] * 60;
                 let clueinterval = args[1] * 60 / clues.length;
                 console
-                let countdown = 10;
+                let countdown = 5 * 10;
                 let r = 0
                 let c = 0
                 let cluestring = clues[c]
@@ -165,8 +165,7 @@ client.on('message', async message => {
                             hours = Math.floor(eventduration / 60 / 60);
                             minutes = Math.floor(eventduration / 60 - hours * 60);
                             seconds = Math.floor(eventduration - minutes * 60 - hours * 60 * 60);
-                            console.log(eventduration)
-                            minutes2 = Math.floor(timetonextclue / 60 - hours * 60);
+                            minutes2 = Math.floor(timetonextclue / 60);
                             seconds2 = Math.floor(timetonextclue - minutes2 * 60);
                             console.log(timetonextclue)
                             console.log(minutes2)
@@ -218,5 +217,13 @@ client.on('message', async message => {
             eventchannel.bulkDelete(100);
         }
         activeevent = " ";
+    }
+    else if (isValidCommand(message, "test")) {
+        let timetonextclue = 110
+        let minutes2 = Math.floor(timetonextclue / 60);
+        let seconds2 = Math.floor(timetonextclue - minutes2 * 60);
+        console.log(minutes2)
+        console.log(seconds2)
+
     }
 });
