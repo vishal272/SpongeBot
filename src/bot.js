@@ -167,9 +167,6 @@ client.on('message', async message => {
                             seconds = Math.floor(eventduration - minutes * 60 - hours * 60 * 60);
                             minutes2 = Math.floor(timetonextclue / 60);
                             seconds2 = Math.floor(timetonextclue - minutes2 * 60);
-                            console.log(timetonextclue)
-                            console.log(minutes2)
-                            console.log(seconds2)
                             eventrunningembed.spliceFields(0, 3,
                                 { name: "Time Left", value: hours.pad(2) + ':' + minutes.pad(2) + ":" + seconds.pad(2), inline: true },
                                 { name: "Time to next clue", value: minutes2.pad(2) + ":" + seconds2.pad(2), inline: true },
