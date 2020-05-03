@@ -204,9 +204,13 @@ client.on('message', async message => {
     else if (isValidCommand(message, "endevent") && message.channel.id == EventCommandsChannelid) {
         let args = message.content.split(" ");
         let eventchannel = client.channels.cache.get(EventChannelid);
+        console.log(args[1])
+        console.log(args[2])
+        console.log(args[3])
+
         if (eventchannel) {
             if (activeevent === "hidenseek") {
-                eventchannel.send("Congratulations " + args[1] + "! You found " + eventhost + "! :smile:");
+                eventchannel.send("Congratulations " + args[1] + ", " + args[2] + " and " + args[3] + "! You found " + eventhost + "! :smile:");
             }
             else {
                 message.channel.send("This event doesn't exist :upside_down:")
