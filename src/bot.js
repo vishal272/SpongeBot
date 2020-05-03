@@ -218,12 +218,4 @@ client.on('message', async message => {
         }
         activeevent = " ";
     }
-    else if (isValidCommand(message, "test")) {
-        let timetonextclue = 110
-        let minutes2 = Math.floor(timetonextclue / 60);
-        let seconds2 = Math.floor(timetonextclue - minutes2 * 60);
-        console.log(minutes2)
-        console.log(seconds2)
-
-    }
 });
