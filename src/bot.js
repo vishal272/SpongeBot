@@ -65,6 +65,8 @@ client.on('message', async message => {
             message.channel.send("Role not found!")
         }
     }
+
+    
     else if (isValidCommand(message, "startevent") && message.channel.id == EventCommandsChannelid) {
         let arglines = message.content.substring(12).split('\n');
         let args = arglines[0].split(' ')
